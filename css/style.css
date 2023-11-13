@@ -57,7 +57,7 @@ header {
     align-items: center;
     position: fixed;
     z-index: 10000;
-    width: 95%;
+    width: 90%;
 
 }
 
@@ -208,7 +208,7 @@ header .button {
     width: 100%;
     position: fixed;
     bottom: -10px;
-    z-index:999;
+    z-index: 9999;
 }
 
 header .button a {
