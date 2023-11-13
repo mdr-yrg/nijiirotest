@@ -26,7 +26,7 @@
             const offset = fadeIn.getBoundingClientRect().top;
             const scroll = this.window.scrollY;
 
-            if(scroll > offset - windowHeight + 250){
+            if(scroll > offset - windowHeight + 200){
                 fadeIn.classList.add('show');
             }
             else{
