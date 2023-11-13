@@ -1,0 +1,535 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #333333;
+    overflow-x: hidden;
+
+}
+
+h1,
+h2,
+ul,
+li,
+p,
+dl,
+dt,
+dd,
+table,
+tbody,
+th,
+tr,
+td {
+    margin: 0;
+    padding: 0;
+
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 30px;
+
+
+}
+
+.container {
+    margin: 40px;
+    text-align: center;
+}
+
+
+
+header {
+    background-color: rgba(219, 234, 240, 0.747);
+}
+
+
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+    width: 95%;
+
+}
+
+.header-title {
+    width: calc(100%/2);
+}
+
+.header-title img {
+    display: block;
+    max-width: 200px;
+
+}
+
+.hamburger {
+    width: 40px;
+    height: 25px;
+    position: relative;
+}
+
+.hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #2087ed;
+}
+
+.hamburger span:first-of-type {
+    top: 0;
+}
+
+.hamburger span:nth-of-type(2) {
+    top: 50%;
+}
+
+.hamburger span:last-of-type {
+    top: 100%;
+}
+
+.slide-menu {
+    background-color: #2087ed;
+    position: fixed;
+    transition: ease 1s;
+    transform: translateY(0);
+    z-index: 9999;
+    width: 300px;
+    text-align: center;
+    opacity: 0;
+    top: 0;
+    right: 0;
+
+}
+
+.slide-menu .nav-item {
+    list-style: none;
+    padding: 50px 70px;
+    line-height: 300%;
+    margin: auto;
+
+
+}
+
+
+.slide-menu li a {
+    color: #fff;
+
+}
+
+/*アクティブ時*/
+
+.hamburger.active span:first-of-type {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:last-of-type {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+.slide-menu.active {
+    transform: translateY(20%);
+    opacity: 0.95;
+}
+
+
+/*アクティブ時*/
+
+
+
+.icon {
+    display: inline-block;
+    background-image: url(../img/icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+    padding-right: 10px;
+
+}
+
+
+
+.slide .slide-item {
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+.slide .slideshow {
+    display: flex;
+    animation: loop-slide 25s infinite linear 1s both;
+    list-style: none;
+    margin-top: 100px;
+
+
+}
+
+.slide .wrap {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    height: 300px;
+
+}
+
+@keyframes loop-slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+header .button {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    bottom: -10px;
+}
+
+header .button a {
+    margin-bottom: 10px;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 45px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 8px 08px rgba(0, 0, 0, 0.16);
+    text-align: right;
+
+}
+
+
+header .button .tel {
+    background-image: url(../img/sp.png);
+    background-size: 30px;
+    background-position: left 30px center;
+    background-repeat: no-repeat;
+    width: 50%;
+    background-color: rgba(0, 136, 255, 0.842);
+
+}
+
+header .button .tel:hover,
+header .button .tel:focus {
+    background-color: rgba(71, 181, 249, 0.962)
+}
+
+
+header .button .web {
+    background-image: url(../img/pc.png);
+    background-size: 47px;
+    background-position: left 25px center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 08px rgba(0, 0, 0, 0.16);
+    width: 50%;
+    background-color: rgba(244, 116, 24, 0.805);
+}
+
+header .button .web:hover,
+header .button .web:focus {
+    background-color: rgba(247, 154, 61, 0.962);
+}
+
+
+.greeting p {
+    line-height: 1.8rem;
+    text-align: left;
+    display: inline-block;
+}
+
+
+.examination-details .list {
+    column-count: 2;
+    list-style: none;
+}
+
+
+
+.examination-details .item {
+    transition: all 1s linear 0s;
+    transform: translate(-30px, 0);
+    opacity: 0;
+    padding-top: 20px;
+    padding-bottom: -20px;
+}
+
+
+/*ショー*/
+.examination-details .item.show {
+    opacity: 1;
+    transform: translate(0, -30px);
+
+
+}
+
+/*ショー*/
+
+.info .news {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.info .news div {
+    border-bottom: 1px solid #9b9a9a;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80%;
+    max-width: 700px;
+    text-align: left;
+    display: inline-block;
+}
+
+.info .news div a {
+    color: #333;
+}
+
+
+
+.medical-hours .container {
+    margin: auto;
+}
+
+.medical-hours table {
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    word-break: break-word;
+
+}
+
+.medical-hours table th {
+    border-top: 1px solid #2087ed;
+    font-weight: bold;
+    background-color: #2087ed;
+    color: #fff;
+
+}
+
+.medical-hours table .time {
+    width: 25%;
+
+}
+
+
+
+.medical-hours table th,
+.medical-hours table td {
+    border-bottom: 1px solid #2087ed;
+    padding: 10px 10px;
+    text-align: center;
+    height: 50px;
+    min-width: 58px;
+}
+
+tr *:nth-child(1) {
+    border-left: 1px solid #2087ed;
+}
+
+tr *:nth-child(7) {
+    border-right: 1px solid #2087ed;
+}
+
+.medical-hours table td.maru,
+.medical-hours table td.batsu {
+    color: #2087ed;
+}
+
+
+.medical-hours table td.maru {
+    font-size: 2rem;
+}
+
+.medical-hours p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    color: #333333;
+
+}
+
+.examination-details ul {
+    list-style: none;
+}
+
+.examination-details li img {
+    width: 150px;
+    height: auto;
+    padding: 10px;
+
+}
+
+.reservation {
+    text-align: center;
+
+}
+
+.reservation p {
+    padding-top: 10px;
+
+}
+
+.reservation .denwa {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+
+}
+
+.reservation .button {
+    text-align: center;
+    padding: 40px 0;
+
+}
+
+.reservation .button a {
+    background-color: rgba(244, 116, 24, 0.805);
+    color: #fff;
+    padding: 35px 80px;
+    font-weight: bold;
+    text-decoration: none;
+    min-width: 260px;
+    display: inline-block;
+    background-image: url(../img/arrow1.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: right 40px center;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 15px;
+
+}
+
+.reservation .button a:hover,
+.reservation .button a:focus {
+    background-color: rgba(247, 154, 61, 0.962);
+}
+
+
+
+.access iframe {
+    width: 100%;
+    height: 40vw;
+    max-width: 700px;
+    max-height: 300px;
+}
+
+.access .clinic-data {
+    padding-top: 10px;
+    text-align: center;
+
+}
+
+.access .clinic-data div {
+    display: flex;
+    justify-content: center;
+}
+
+.access .clinic-data dt {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.access .clinic-data dd {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+footer {
+    background-color: rgba(219, 234, 240, 0.747);
+    margin-bottom: 50px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+@media (min-width:768px) {
+
+    .container {
+        max-width: 740px;
+        margin: 40px auto;
+    }
+
+    header .button {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .slide-menu {
+        transform: translateY(0);
+        transition: unset;
+        position: fixed;
+        opacity: 1;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+
+
+    }
+
+    .slide-menu .nav-item {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .slide-menu li {
+        background-color: #2087ed;
+        display: inline-block;
+        width: 180px;
+        padding: 5px 25px;
+        font-size: 1rem;
+        margin: 30px 5px;
+        opacity: 0.8;
+
+    }
+
+    .slide .wrap {
+        padding-top: 60px;
+    }
+
+    .examination-details .list {
+        column-count: 3;
+
+    }
+
+    footer {
+        margin-bottom: 0;
+    }
+
+}
