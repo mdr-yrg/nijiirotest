@@ -415,7 +415,7 @@ tr *:nth-child(7) {
 .reservation .button a {
     background-color: rgba(244, 116, 24, 0.805);
     color: #fff;
-    padding: 35px 80px;
+    padding: 30px 40px;
     font-weight: bold;
     text-decoration: none;
     min-width: 260px;
